@@ -1,0 +1,85 @@
+﻿@using Lib.Web.Mvc
+@using TheExpense.ViewModels
+
+@model TheExpense.Models.Expense
+
+@{
+    var grid =
+        new Lib.Web.Mvc.JQuery.JqGrid.JqGridHelper<ExpenseViewModel>(
+        "expenseGrid",
+       dataType: Lib.Web.Mvc.JQuery.JqGrid.JqGridDataTypes.Json,
+       methodType: Lib.Web.Mvc.JQuery.JqGrid.JqGridMethodTypes.Post,
+       pager: false,
+       rowsNumber: -1,
+        //sortingName: "Id",
+        //sortingOrder: Lib.Web.Mvc.JQuery.JqGrid.JqGridSortingOrders.Asc,
+       url: Url.Action("GetExpenses", "Expense"),
+       viewRecords: true,
+       onDoubleClickRow: "loadExpense"
+   //).AddActionsColumn(
+   //"actions", 100, 50, 
+   //editButton:false, 
+   //deleteButton:true
+   );
+}
+
+<hr />
+<p>Expense Grid</p>
+<div id="grid">
+    <p id="gridInfo"></p>
+@grid.GetHtml()
+</div>
+
+
+
+<hr />
+
+<p> Partial view </p>
+<div id="edit">
+    <p id="doubleclick">Double click text will be shown here</p>
+    <div id="editPartial">
+@Html.Partial("_EditPartial", Model)
+    </div>
+
+</div>
+
+
+@section scripts {
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        @grid.GetJavaScript()
+    });
+    </script>
+
+<script type="text/javascript">
+    function refreshGrid() {
+        $("#expenseGrid").trigger("reloadGrid");
+        $("#gridInfo").innerHTML = "Refreshed by partial view";
+    };
+
+    </script>
+
+<script type="text/javascript">
+    function loadExpense(rowid, iRow, iCol, e)
+    {
+        document.getElementById("doubleclick").innerHTML = "Double clicked " + rowid;
+
+        $.ajax({
+            url:"/Expense/GetExpenseToEdit",
+            type: "GET",
+            data: { id: rowid }
+        }).done(
+        function (partialView) {
+            $("#editPartial").html(partialView);
+        });
+    };
+
+</script>
+
+
+    }
+
+
+
+
