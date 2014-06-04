@@ -109,3 +109,13 @@ packages/jQuery.UI.Combined.1.10.4/jQuery.UI.Combined.1.10.4.nupkg
 packages/jQuery.UI.Combined.1.10.4/Content/Scripts/jquery-ui-1.10.4.min.js
 packages/jQuery.UI.Combined.1.10.4/Content/Content/themes/base/images/ui-icons_cd0a0a_256x240.png
 packages/jQuery.UI.Combined.1.10.4/Content/Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png
+packages/jQuery.Validation.1.11.1/Content/Scripts/jquery.validate-vsdoc.js
+packages/jQuery.Validation.1.11.1/Content/Scripts/jquery.validate.js
+packages/jQuery.Validation.1.11.1/jQuery.Validation.1.11.1.nupkg
+packages/jQuery.Validation.1.11.1/Content/Scripts/jquery.validate.min.js
+packages/Lib.Web.Mvc.6.4.1/Lib.Web.Mvc.6.4.1.nupkg
+packages/Lib.Web.Mvc.6.4.1/lib/net40/Lib.Web.Mvc.xml
+packages/Lib.Web.Mvc.6.4.1/lib/net40/Lib.Web.Mvc.dll
+packages/Microsoft.AspNet.Identity.Core.1.0.0/Microsoft.AspNet.Identity.Core.1.0.0.nupkg
+packages/Microsoft.AspNet.Identity.Core.1.0.0/lib/net45/Microsoft.AspNet.Identity.Core.dll
+packages/Microsoft.AspNet.Identity.Core.1.0.0/lib/net45/Microsoft.AspNet.Identity.Core.xml
