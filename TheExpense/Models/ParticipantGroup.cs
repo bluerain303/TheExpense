@@ -32,5 +32,16 @@ namespace TheExpense.Models
         }
 
         public virtual ICollection<ParticipantGroupMapping> Groups { get; set; }
+
+        public string Comment
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }
