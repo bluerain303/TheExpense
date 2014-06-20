@@ -9,8 +9,6 @@ namespace TheExpense.DAL
     public class UnitOfWork : IDisposable
     {
         private TheExpenseDbContext _context;
-        private IPayerRepository _payerRepository;
-        private IPayeeRepository _payeeRepository;
         private IExpenseRepository _expenseRepository;
 
         private bool _disposed = false;
@@ -22,16 +20,6 @@ namespace TheExpense.DAL
             this._context = new TheExpenseDbContext();
         }
 
-        public UnitOfWork(IPayerRepository PayerRepository)
-        {
-            this._payerRepository = PayerRepository;
-        }
-
-        public UnitOfWork(IPayeeRepository PayeeRepository)
-        {
-            this._payeeRepository = PayeeRepository;
-        }
-
         public UnitOfWork(IExpenseRepository ExpenseRepository)
         {
             this._expenseRepository = ExpenseRepository;
@@ -41,29 +29,6 @@ namespace TheExpense.DAL
 
         #region Properties
         // ######################################################
-        public IPayerRepository PayerRepository
-        { 
-            get
-            {
-                if (this._payerRepository == null)
-                {
-                    this._payerRepository = new PayerRepository(this._context);
-                }
-                return this._payerRepository;
-            }
-        }
-
-        public IPayeeRepository PayeeRepository
-        {
-            get
-            {
-                if (this._payeeRepository == null)
-                {
-                    this._payeeRepository = new PayeeRepository(this._context);
-                }
-                return this._payeeRepository;
-            }
-        }
 
         public IExpenseRepository ExpenseRepository
         {

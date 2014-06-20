@@ -12,8 +12,6 @@ namespace TheExpense.DAL
         public TheExpenseDbContext() : base("TheExpense") { }
 
 
-        public DbSet<Payer> Payers {get;set;}
-        public DbSet<Payee> Payees { get; set; }
         public DbSet<Expense> Expenses { get; set; }
 
 

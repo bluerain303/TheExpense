@@ -28,32 +28,32 @@ namespace TheExpense.Migrations
             //    );
             //
 
-            context.Payers.AddOrUpdate(
-                p => p.FirstName,
-                new Payer() { FirstName="Yishi", LastName="Li"}
-                );
+            //context.Payers.AddOrUpdate(
+            //    p => p.FirstName,
+            //    new Payer() { FirstName="Yishi", LastName="Li"}
+            //    );
 
-            context.Payees.AddOrUpdate(
-               p => p.FirstName,
-               new Payee() { FirstName = "Ling", LastName = "Shen" }
-               );
+            //context.Payees.AddOrUpdate(
+            //   p => p.FirstName,
+            //   new Payee() { FirstName = "Ling", LastName = "Shen" }
+            //   );
 
-            context.SaveChanges();
+            //context.SaveChanges();
 
-            var yishi = context.Payers.First();
-            var ling = context.Payees.First();
+            //var yishi = context.Payers.First();
+            //var ling = context.Payees.First();
 
-            context.Expenses.AddOrUpdate(
-                new Expense() { 
-                    PayerID = yishi.ID, 
-                    PayeeID=ling.ID, 
-                    Amount=100, 
-                    Currency="SEK", 
-                    Date=DateTime.Now, 
-                    Comment="test payment"}
-                );
+            //context.Expenses.AddOrUpdate(
+            //    new Expense() { 
+            //        PayerID = yishi.ID, 
+            //        PayeeID=ling.ID, 
+            //        Amount=100, 
+            //        Currency="SEK", 
+            //        Date=DateTime.Now, 
+            //        Comment="test payment"}
+            //    );
 
-            context.SaveChanges();
+            //context.SaveChanges();
         }
     }
 }

@@ -164,16 +164,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ExpenseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\ExpenseRepository.cs" />
     <Compile Include="DAL\Interfaces\IExpenseRepository.cs" />
-    <Compile Include="DAL\Interfaces\IPayeeRepository.cs" />
-    <Compile Include="DAL\Interfaces\IPayerRepository.cs" />
-    <Compile Include="DAL\PayeeRepository.cs" />
-    <Compile Include="DAL\PayerRepository.cs" />
     <Compile Include="DAL\TheExpenseDbContext.cs" />
     <Compile Include="DAL\UnitOfWork.cs" />
+    <Compile Include="Models\ExpenseGroupMapping.cs" />
+    <Compile Include="Models\ExpenseGroup.cs" />
+    <Compile Include="Models\ExpenseType.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -184,8 +182,10 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Expense.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Payee.cs" />
-    <Compile Include="Models\Payer.cs" />
+    <Compile Include="Models\Participant.cs" />
+    <Compile Include="Models\ParticipantGroup.cs" />
+    <Compile Include="Models\ParticipantGroupMapping.cs" />
+    <Compile Include="Place.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\ExpenseViewModel.cs" />
@@ -264,6 +264,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Models\ExpenseModels.cd" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\JqGrid\ExpenseGrid.js" />
     <Content Include="Scripts\JqGrid\jquery.jqGrid.min.js" />

@@ -16,8 +16,8 @@ namespace TheExpense.ViewModels
         public ExpenseViewModel(Expense Exp)
         {
             this.Id = Exp.ID;
-            this.PayerId = Exp.PayerID;
-            this.PayeeId = Exp.PayeeID;
+            //this.PayerId = Exp.PayerID;
+            //this.PayeeId = Exp.PayeeID;
             this.Amount = Exp.Amount;
             this.Currency = Exp.Currency;
             this.Comment = Exp.Comment;
