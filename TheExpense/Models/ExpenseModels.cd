@@ -1,60 +1,86 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="TheExpense.Models.Expense">
-    <Position X="0.5" Y="0.5" Width="2" />
+    <Position X="6" Y="1.25" Width="3.25" />
+    <AssociationLine Name="PayerGroup" Type="TheExpense.Models.ParticipantGroup">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.102" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AIgAAEAEAEAAgAAAAAAAAACACAAAAAABAUAAAQAAAAA=</HashCode>
       <FileName>Models\Expense.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Place" />
+      <Property Name="Payee" />
+      <Property Name="Payer" />
+      <Property Name="PayeeGroup" />
+      <Property Name="PayerGroup" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="TheExpense.Models.Participant">
-    <Position X="8.25" Y="0.5" Width="1.5" />
+    <Position X="11" Y="5.75" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Participant.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TheExpense.Models.ParticipantGroup">
-    <Position X="13.75" Y="0.5" Width="1.5" />
+    <Position X="11" Y="0.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAEAAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\ParticipantGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TheExpense.Models.ParticipantGroupMapping">
-    <Position X="10.5" Y="0.5" Width="2.75" />
+    <Position X="11" Y="3.25" Width="2.75" />
+    <AssociationLine Name="MapParticipant" Type="TheExpense.Models.Participant">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.112" Y="0.693" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAEAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Models\ParticipantGroupMapping.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MapParticipantGroup" />
+      <Property Name="MapParticipant" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="TheExpense.Models.Place">
-    <Position X="10.75" Y="3.25" Width="1.5" />
+    <Position X="7" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAIAAAAAAQAAAIAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>Place.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TheExpense.Models.ExpenseType">
-    <Position X="0.5" Y="4" Width="1.5" />
+    <Position X="2.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\ExpenseType.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TheExpense.Models.ExpenseGroup">
-    <Position X="4.75" Y="2.5" Width="3.25" />
+    <Position X="0.5" Y="0.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAEAEAAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\ExpenseGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TheExpense.Models.ExpenseGroupMapping">
-    <Position X="3" Y="0.5" Width="2.75" />
+    <Position X="1" Y="2.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAIAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Models\ExpenseGroupMapping.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MapExpense" />
+      <Property Name="MapExpenseGroup" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
